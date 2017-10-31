@@ -7,6 +7,12 @@ const fetch = require('node-fetch');
 class App extends Component
 {
 
+    constructor(props)
+    {
+        super();
+        this.state = {};
+    }
+
     render()
     {
 
@@ -25,6 +31,8 @@ class App extends Component
     }
 
 }
+
+
 
 class HomeScreen extends Component
 {
