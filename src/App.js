@@ -8,7 +8,7 @@ class App extends Component
     constructor(props)
     {
         super();
-        this.state = {};
+        this.state = {view:"home"};
     }
 
     render()
@@ -23,7 +23,7 @@ class App extends Component
                 {/*<p className="App-intro">*/}
                     {/*To get started, edit <code>src/App.js</code> and save to reload.*/}
                 {/*</p>*/}
-                <HomeScreen/>
+                <AllUsers/>
                 <AllUsers/>
             </div>
         );
@@ -74,7 +74,7 @@ class HomeScreen extends Component
         fetch('/users/')
             .then(response=>
             {
-                console.log(response.json());
+                this.data = response.json();
             })
             .catch(error=>
             {
