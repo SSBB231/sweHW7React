@@ -15,7 +15,7 @@ class App extends Component
     {
 
         return (
-            <div className="App">
+            <div class="App">
                 {/*<header className="App-header">*/}
                     {/*<img src={logo} className="App-logo" alt="logo"/>*/}
                     {/*<h1 className="App-title">Failed to Load Homepage</h1>*/}
@@ -40,24 +40,29 @@ class AllUsers extends Component
 
 class HomeScreen extends Component
 {
+    constructor(props)
+    {
+        super(props);
+        this.data = [];
+    }
+
+    componentDidMount()
+    {
+        fetch('/users/')
+            .then(response=>
+            {
+                console.log(response.json());
+            })
+            .catch(error=>
+            {
+                console.log(error);
+            });
+    }
+
     render()
     {
         return (
             <div>
-            <head>
-                <meta charSet="utf-8"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-                <meta name="description" content=""/>
-                <meta name="author" content=""/>
-                <link rel="icon" href="../../favicon.ico"/>
-
-                <title>utuezi home</title>
-
-                <link href="../dist/css/bootstrap.css" rel="stylesheet"/>
-                <link href="../dist/css/starter-template.css" rel="stylesheet"/>
-            </head>
-
-            <body>
             <nav class="navbar navbar-toggleable-md navbar-inverse bg-success fixed-top">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                         data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
@@ -101,7 +106,6 @@ class HomeScreen extends Component
                 </section>
 
             </div>
-            </body>
             </div>
         );
     }
