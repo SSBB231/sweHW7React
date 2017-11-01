@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 const fetch = require('node-fetch');
 
-fetch('http://localhost:5000/')
+fetch('localhost:5000/users/')
     .then((req, res)=>
     {
         return res.json();

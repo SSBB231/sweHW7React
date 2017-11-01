@@ -34,7 +34,10 @@ class App extends Component
 
 class AllUsers extends Component
 {
-
+    render()
+    {
+        return (<div></div>);
+    }
 }
 
 class HomeScreen extends Component
