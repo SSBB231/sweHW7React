@@ -32,7 +32,10 @@ class App extends Component
 
 }
 
+class AllUsers extends Component
+{
 
+}
 
 class HomeScreen extends Component
 {
@@ -49,8 +52,8 @@ class HomeScreen extends Component
 
                 <title>utuezi home</title>
 
-                <link href="..dist/css/bootstrap.css" rel="stylesheet"/>
-                <link href="..dist/css/starter-template.css" rel="stylesheet"/>
+                <link href="../dist/css/bootstrap.css" rel="stylesheet"/>
+                <link href="../dist/css/starter-template.css" rel="stylesheet"/>
             </head>
 
             <body>
