@@ -34,7 +34,7 @@ class AllUsers extends Component {
     constructor(props){
         super(props);
         this.state = {size: 2}
-        let userarray=props.users;
+        let userarray=[];
         //let firstnames userarray.map((firstname
         let firstnames=[1,2,3];
         let arrayemail=[3,2,1];
@@ -46,7 +46,7 @@ class AllUsers extends Component {
                 let cell = []
                 for (var idx = 0; idx < this.state.size; idx++){
                     let cellID = `cell${i}-${idx}`
-                    cell.push(<td key={cellID} id={cellID}{firstnames[idx]+" "+lastnames[idx]}></td>)
+                    cell.push(<td key={cellID} id={cellID}>{this.firstnames[idx]+" "+this.lastnames[idx]}</td>)
                 }
                 rows.push(<tr key={i} id={rowID}>{cell}</tr>)
             }
