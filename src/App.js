@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const fetch = require('node-fetch');
-
 class App extends Component
 {
 
@@ -33,6 +31,7 @@ class App extends Component
 
 }
 
+<<<<<<< HEAD
 class AllUsers extends Component {
     render() {
         return (
@@ -74,6 +73,13 @@ class AllUsers extends Component {
                 </tr>
             </table>
         );
+=======
+class AllUsers extends Component
+{
+    render()
+    {
+        return (<div></div>);
+>>>>>>> 30a13e83c110f78eb49835139c792be1b9776823
     }
 }
 
@@ -82,9 +88,9 @@ class HomeScreen extends Component
     render()
     {
         return (
-            <html>
+            <div>
             <head>
-                <meta charset="utf-8"/>
+                <meta charSet="utf-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
                 <meta name="description" content=""/>
                 <meta name="author" content=""/>
@@ -131,7 +137,7 @@ class HomeScreen extends Component
                 <div class="starter-template">
                     <h1>Welcome to utuezi!</h1>
                     <br/>
-                    <button class="btn btn-outline-success" id="showMonth" onclick="fetchThisMonth">
+                    <button class="btn btn-outline-success" id="showMonth" onClick="fetchThisMonth">
                         This Month's Appointments
                     </button>
                 </div>
@@ -141,7 +147,7 @@ class HomeScreen extends Component
 
             </div>
             </body>
-            </html>
+            </div>
         );
     }
 }
